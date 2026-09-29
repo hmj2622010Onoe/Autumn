@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6469111504858986582}
   - component: {fileID: 604038191605796707}
   - component: {fileID: 2266397014036059683}
+  - component: {fileID: -4999417128179320614}
   m_Layer: 0
   m_Name: leaves
   m_TagString: Untagged
@@ -156,3 +157,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-4999417128179320614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2463373593862941215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9983a4e57c305914e95420d493a16135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LeavesContllorer
+  spriteRenderer: {fileID: 6469111504858986582}
+  leaves1: {fileID: -3864771739476507756, guid: 359899425dd07c54ab42339a4e1008e4, type: 3}
+  leaves2: {fileID: 5924549963853653257, guid: 967adb5d0a1ae0a40b9adf8c91035393, type: 3}
+  leaves3: {fileID: -8766487834408277533, guid: 28cd1e372e07f3047b2db117fc044fa7, type: 3}
+  leaves4: {fileID: 7797364532086310192, guid: 478131ea284d58a4584196fd83908372, type: 3}
+  leaves5: {fileID: 416658074743897389, guid: dfd68a0d08fc0154381ce79e6c83c230, type: 3}
+  leaves6: {fileID: 3234568437426354524, guid: 1d3a7a94d570d0d43bd6e1b3b0da07c0, type: 3}
+  leaves7: {fileID: -4202173866068412023, guid: eac50dc6d132c274e923d15224c8aaa3, type: 3}
+  leaves8: {fileID: 4724953574433484603, guid: 2631f93bc40832643ae250e3cf2e3971, type: 3}
