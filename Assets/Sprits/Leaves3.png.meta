@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 22d3ce872072ad845b6013641c0e7fca
+guid: 28cd1e372e07f3047b2db117fc044fa7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8885997845782540227
-    second: Autumu_leaves1_0
+      213: -8766487834408277533
+    second: Leaves3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Autumu_leaves1_0
+      name: Leaves3_0
       rect:
         serializedVersion: 2
-        x: 518
-        y: 299
-        width: 141
-        height: 147
+        x: 527
+        y: 278
+        width: 147
+        height: 164
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cf21c0f5f7615b70800000000000000
-      internalID: 8885997845782540227
+      spriteID: 3e9af4ee2cd275680800000000000000
+      internalID: -8766487834408277533
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Autumu_leaves1_0: 8885997845782540227
+      Leaves3_0: -8766487834408277533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d83278f120da2e745b589237a4945753
+guid: 8ed0e24323fe8654a90cd640fd04e6be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6679369446933973336
-    second: Autumn_Dustpan_0
+      213: 7269250196468613659
+    second: Dustpan_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Autumn_Dustpan_0
+      name: Dustpan_0
       rect:
         serializedVersion: 2
         x: 507
-        y: 263
+        y: 268
         width: 187
-        height: 205
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 859c8188f13e1bc50800000000000000
-      internalID: 6679369446933973336
+      spriteID: b1243ff1a8091e460800000000000000
+      internalID: 7269250196468613659
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Autumn_Dustpan_0: 6679369446933973336
+      Dustpan_0: 7269250196468613659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
