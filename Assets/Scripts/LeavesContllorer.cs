@@ -80,7 +80,7 @@ public class LeavesContllorer : MonoBehaviour
 			randSwingY = 0;
 		}
 
-		transform.localScale = new Vector3(randSwingX, randSize, randSize);
+		transform.localScale = new Vector3(randSize+randSwingX, randSize+ randSwingX, randSize);
 
 		if (flag)
 		{
