@@ -3,9 +3,15 @@ using UnityEngine;
 public class LeavesManager : MonoBehaviour
 {
 	[SerializeField] GameObject leavesPrefab;
+	[SerializeField] GameObject dustPan;
 
-	int maxLeaves = 200;
+	[SerializeField]int maxLeaves = 200;
 	int leavesCount = 0;
+
+	[SerializeField] float xPlus=10f;
+	[SerializeField] float xMinus=10f;
+	[SerializeField] float yPlus=5f;
+	[SerializeField] float yMinus=5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,10 +22,11 @@ public class LeavesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (maxLeaves > leavesCount)
+		for (int i = leavesCount; maxLeaves > i; i++)
 		{
 			GameObject leave = Instantiate(leavesPrefab);
-			leave.transform.position = new Vector2(Random.Range(-10f, 10f), Random.Range(-5f, 5f));
+			leave.transform.position = new Vector2(Random.Range(-xMinus, xPlus), Random.Range(-yMinus, yPlus));
+			//leave.GetComponent<LeavesContllorer>().dustPan = this.dustPan;
 			leavesCount++;
 		}
 	}

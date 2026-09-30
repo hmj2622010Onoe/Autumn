@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 604038191605796707}
   - component: {fileID: 2266397014036059683}
   - component: {fileID: -4999417128179320614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: leaves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3864771739476507756, guid: 359899425dd07c54ab42339a4e1008e4, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -92,7 +92,7 @@ SpriteRenderer:
   m_Size: {x: 1.41, y: 1.47}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!58 &604038191605796707
 CircleCollider2D:
@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LeavesContllorer
   spriteRenderer: {fileID: 6469111504858986582}
+  dustPan: {fileID: 0}
   leaves1: {fileID: -3864771739476507756, guid: 359899425dd07c54ab42339a4e1008e4, type: 3}
   leaves2: {fileID: 5924549963853653257, guid: 967adb5d0a1ae0a40b9adf8c91035393, type: 3}
   leaves3: {fileID: -8766487834408277533, guid: 28cd1e372e07f3047b2db117fc044fa7, type: 3}
@@ -178,3 +179,11 @@ MonoBehaviour:
   leaves6: {fileID: 3234568437426354524, guid: 1d3a7a94d570d0d43bd6e1b3b0da07c0, type: 3}
   leaves7: {fileID: -4202173866068412023, guid: eac50dc6d132c274e923d15224c8aaa3, type: 3}
   leaves8: {fileID: 4724953574433484603, guid: 2631f93bc40832643ae250e3cf2e3971, type: 3}
+  leaves9: {fileID: -2810625405425195030, guid: 94838c4557a9c544c96b2dc709e2286c, type: 3}
+  leaves10: {fileID: 6281081497084901328, guid: 5dc5fda0b9dab0d42973e4c91599d460, type: 3}
+  leaves11: {fileID: -8641314754049355409, guid: f2c083c853155264eb28f78f3c630284, type: 3}
+  leaves12: {fileID: 8728764235993058819, guid: a837dc826ece6c443956096fc35a5cb7, type: 3}
+  leaves13: {fileID: 1840066059410802934, guid: b7781bb963d79334aad294b3049b20c1, type: 3}
+  leaves14: {fileID: -2515563577052444221, guid: e4006fad684059743900c3dbcbf63f5b, type: 3}
+  leaves15: {fileID: 5520716099315610860, guid: 22cbe3cddd4688743ab6fa90e60f7df6, type: 3}
+  leaves16: {fileID: 4431140069054013578, guid: 16968cfa1abbcd74c9eba3d46d26b0fd, type: 3}
