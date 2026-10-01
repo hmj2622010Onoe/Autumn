@@ -6,6 +6,9 @@ public class RakeMove : MonoBehaviour
 {
 	Rigidbody2D rigid2D;
 
+	[SerializeField] SpriteRenderer spriteRenderer;
+	[SerializeField] GameObject leaves;
+
 	[SerializeField]int moveSpeed = 20;			// 動くスピード
 	[SerializeField]float rotateSpeed = 0.2f;   // 向くスピード
 	[SerializeField] int rotateMar = 90;        // どこまでの範囲なら回転できるようにするか
@@ -14,6 +17,11 @@ public class RakeMove : MonoBehaviour
 	[SerializeField]CircleCollider2D col2;
 	[SerializeField]CircleCollider2D col3;
 	[SerializeField]CircleCollider2D col4;
+
+	[SerializeField] AudioClip leavesSe1;
+	[SerializeField] AudioClip leavesSe2;
+	[SerializeField] AudioClip leavesSe3;
+	[SerializeField] AudioClip leavesSe4;
 
 	bool wKey=false;
 	bool aKey=false;
@@ -27,7 +35,6 @@ public class RakeMove : MonoBehaviour
 	void Start()
 	{
 		rigid2D = GetComponent<Rigidbody2D>();
-		Application.targetFrameRate = 60;
 	}
 
 	// Update is called once per frame
@@ -43,28 +50,28 @@ public class RakeMove : MonoBehaviour
 			//if (wKey == false && aKey == false && sKey == false && dKey == false)
 				if (shiftKey == false)
 				{ rigid2D.AddForce(Vector2.up * moveSpeed, ForceMode2D.Impulse); }
-			else { rigid2D.AddForce(Vector2.up * (moveSpeed / 2), ForceMode2D.Impulse); }
+			else { rigid2D.AddForce(Vector2.up * (moveSpeed / 1.5f), ForceMode2D.Impulse); }
 		}
 		if (Keyboard.current.downArrowKey.IsPressed())
 		{
 			//if (wKey == false && aKey == false && sKey == false && dKey == false)
 			if (shiftKey == false)
 			{ rigid2D.AddForce(Vector2.down * moveSpeed, ForceMode2D.Impulse); }
-			else { rigid2D.AddForce(Vector2.down * (moveSpeed / 2), ForceMode2D.Impulse); }
+			else { rigid2D.AddForce(Vector2.down * (moveSpeed / 1.5f), ForceMode2D.Impulse); }
 		}
 		if (Keyboard.current.rightArrowKey.IsPressed())
 		{
 			//if (wKey == false && aKey == false && sKey == false && dKey == false)
 			if (shiftKey == false)
 			{ rigid2D.AddForce(Vector2.right * moveSpeed, ForceMode2D.Impulse); }
-			else { rigid2D.AddForce(Vector2.right * (moveSpeed / 2), ForceMode2D.Impulse); }
+			else { rigid2D.AddForce(Vector2.right * (moveSpeed / 1.5f), ForceMode2D.Impulse); }
 		}
 		if (Keyboard.current.leftArrowKey.IsPressed())
 		{
 			//if (wKey == false && aKey == false && sKey == false && dKey == false)
 			if (shiftKey == false)
 			{ rigid2D.AddForce(Vector2.left * moveSpeed, ForceMode2D.Impulse); }
-			else { rigid2D.AddForce(Vector2.left * (moveSpeed / 2), ForceMode2D.Impulse); }
+			else { rigid2D.AddForce(Vector2.left * (moveSpeed / 1.5f), ForceMode2D.Impulse); }
 		}
 
 		// WASDキーでの回転
@@ -118,6 +125,7 @@ public class RakeMove : MonoBehaviour
 			col2.enabled = false;
 			col3.enabled = false;
 			col4.enabled = false;
+			spriteRenderer.color = new Color(1, 1, 1);
 		}
 		else
 		{
@@ -125,6 +133,7 @@ public class RakeMove : MonoBehaviour
 			col2.enabled = true;
 			col3.enabled = true;
 			col4.enabled = true;
+			spriteRenderer.color = new Color(1, 0.5f, 0.5f);
 		}
 
 
@@ -139,6 +148,26 @@ public class RakeMove : MonoBehaviour
 		else dKey = false;
 		if (Keyboard.current.shiftKey.IsPressed()) shiftKey = true;
 		else shiftKey = false;
+
+		if (Keyboard.current.upArrowKey.IsPressed() || Keyboard.current.rightArrowKey.IsPressed() || Keyboard.current.downArrowKey.IsPressed() || Keyboard.current.leftArrowKey.IsPressed())
+		{
+			if (Random.Range(0, 150) == 1)
+			{
+				AudioSource.PlayClipAtPoint(leavesSe1, transform.position);
+			}
+			if (Random.Range(0,150) == 1)
+			{
+				AudioSource.PlayClipAtPoint(leavesSe2, transform.position);
+			}
+			if (Random.Range(0,150) == 1)
+			{
+				AudioSource.PlayClipAtPoint(leavesSe3, transform.position);
+			}
+			if (Random.Range(0, 150) == 1)
+			{
+				AudioSource.PlayClipAtPoint(leavesSe4, transform.position);
+			}
+		}
 
 		// 回転の度数リセット処理
 		if (rigid2D.rotation > 360) rigid2D.rotation -= 360;   

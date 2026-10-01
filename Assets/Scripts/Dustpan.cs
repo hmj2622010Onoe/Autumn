@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class Dustpan : MonoBehaviour
 {
 	[SerializeField] BoxCollider2D closeCol;
+	[SerializeField] AudioClip cleanSE;
 
 	float locationX = 0;
 	float locationY = 7;
@@ -41,6 +42,7 @@ public class Dustpan : MonoBehaviour
 
 		if (Keyboard.current.spaceKey.wasPressedThisFrame)
 		{
+			AudioSource.PlayClipAtPoint(cleanSE, transform.position);
 			cleanTime = true;
 		}
     }

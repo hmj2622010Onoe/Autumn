@@ -6,9 +6,6 @@ public class LeavesContllorer : MonoBehaviour
 	Rigidbody2D rigid2D;
 	[SerializeField] SpriteRenderer spriteRenderer;
 
-	//[SerializeField]GameObject dustPan;
-	//public GameObject dustPan{ get; set; }
-
 	[SerializeField] Sprite leaves1;
 	[SerializeField] Sprite leaves2;
 	[SerializeField] Sprite leaves3;
@@ -26,13 +23,16 @@ public class LeavesContllorer : MonoBehaviour
 	[SerializeField] Sprite leaves15;
 	[SerializeField] Sprite leaves16;
 
+	//[SerializeField] LeavesManager leavesManager;
+	//public LeavesManager LeavesManager { get; set; }
+
 	int randImg;
 	float randColor;
 	float randSize;
 	float randSwingX;
 	float randSwingY;
 	int swingNum;
-	int nowSwing=0;
+	int nowSwing=1;
 	bool flag = true;
 	bool swing = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -44,12 +44,17 @@ public class LeavesContllorer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (transform.position.y > 7) 
+		if (transform.position.y > 7)	// 回収されるとスコアを増やして削除する
 		{
+			//leavesManager.Score = leavesManager.Score + 1;
+			int tempScore = transform.parent.gameObject.GetComponent<LeavesManager>().Score;
+			transform.parent.gameObject.GetComponent<LeavesManager>().Score = tempScore + 100;
+			int tempLeaves = transform.parent.gameObject.GetComponent<LeavesManager>().LeavesCount;
+			transform.parent.gameObject.GetComponent<LeavesManager>().LeavesCount = tempLeaves - 1;
 			Destroy(gameObject);
 		}
 
-		if (swing == false)
+		if (swing == false)	// クローンされたときに揺れる
 		{
 			transform.position = new Vector3(transform.position.x+randSwingX/nowSwing, transform.position.y + randSwingY / nowSwing);
 			nowSwing++;
@@ -57,9 +62,10 @@ public class LeavesContllorer : MonoBehaviour
 			{
 				randSwingX -= randSwingX / 2;
 				randSwingY -= randSwingY / 2;
-				nowSwing = 0;
+				nowSwing = 1;
 				swing = true;
 			}
+			if (transform.position.y > 5) randSwingY = 0;
 		}
 		else
 		{
@@ -69,20 +75,21 @@ public class LeavesContllorer : MonoBehaviour
 			{
 				randSwingX -= randSwingX / 2;
 				randSwingY -= randSwingY / 2;
-				nowSwing = 0;
+				nowSwing = 1;
 				swing = false;
 			}
+			if (transform.position.y > 5) randSwingY = 0;
 		}
 
-		if(randSwingX<0.2&&-0.2<randSwingX&& randSwingY < 0.2 && -0.2 < randSwingY)
+		if(randSwingX<0.1&&-0.1<randSwingX&& randSwingY < 0.1 && -0.1 < randSwingY)	// 揺れを抑える
 		{
 			randSwingX = 0;
 			randSwingY = 0;
 		}
 
-		transform.localScale = new Vector3(randSize+randSwingX, randSize+ randSwingX, randSize);
+		transform.localScale = new Vector3(randSize+randSwingX/2, randSize+ randSwingY/2, randSize);
 
-		if (flag)
+		if (flag)	// クローンされたときのみ
 		{
 			rigid2D.rotation = Random.Range(0, 359);    // 向きを変更
 			randImg = Random.Range(0, 16);  // 画像を変更
@@ -114,20 +121,14 @@ public class LeavesContllorer : MonoBehaviour
 				spriteRenderer.flipX = true;
 			}
 
+			//if (Random.Range(0, 3) == 0)
+			
 			randSwingX = Random.Range(-1.0f, 1.0f);
 			randSwingY = Random.Range(-1.0f, 1.0f);
 			swingNum = Random.Range(20, 50);
 
+			
 			flag = false;
 		}
 	}
-
-	/*private void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject == dustPan)
-		{
-			spriteRenderer.sprite = leaves1;
-			gameObject.layer = LayerMask.NameToLayer("Clean");
-		}
-	}*/
 }
