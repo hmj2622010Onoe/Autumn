@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class LeavesContllorer : MonoBehaviour
 {
@@ -129,6 +131,23 @@ public class LeavesContllorer : MonoBehaviour
 
 			
 			flag = false;
+		}
+		if (SceneManager.GetActiveScene().name == "ResultScene")
+		{
+			if (Keyboard.current.upArrowKey.wasPressedThisFrame)
+			{
+				rigid2D.AddForce(Vector2.up*Random.Range(0,5.0f), ForceMode2D.Impulse);
+			}
+			if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
+			{
+				rigid2D.AddForce(Vector2.up * Random.Range(0, 2.0f), ForceMode2D.Impulse);
+				rigid2D.AddForce(Vector2.right * Random.Range(0, 2.0f), ForceMode2D.Impulse);
+			}
+			if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
+			{
+				rigid2D.AddForce(Vector2.up * Random.Range(0, 2.0f), ForceMode2D.Impulse);
+				rigid2D.AddForce(Vector2.left * Random.Range(0, 2.0f), ForceMode2D.Impulse);
+			}
 		}
 	}
 }
