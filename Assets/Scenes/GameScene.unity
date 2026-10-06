@@ -2346,7 +2346,7 @@ MonoBehaviour:
   yMinus: 5
   timerText: {fileID: 646006590}
   scoreText: {fileID: 775809118}
-  gameTimer: 120
+  gameTimer: 60
 --- !u!4 &2076181710
 Transform:
   m_ObjectHideFlags: 0

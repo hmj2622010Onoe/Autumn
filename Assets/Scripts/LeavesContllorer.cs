@@ -124,29 +124,31 @@ public class LeavesContllorer : MonoBehaviour
 			}
 
 			//if (Random.Range(0, 3) == 0)
-			
-			randSwingX = Random.Range(-1.0f, 1.0f);
-			randSwingY = Random.Range(-1.0f, 1.0f);
-			swingNum = Random.Range(20, 50);
 
-			
-			flag = false;
+			if (SceneManager.GetActiveScene().name != "TitleScene")
+			{
+				randSwingX = Random.Range(-1.0f, 1.0f);
+				randSwingY = Random.Range(-1.0f, 1.0f);
+				swingNum = Random.Range(20, 50);
+			}
+
+				flag = false;
 		}
 		if (SceneManager.GetActiveScene().name == "ResultScene")
 		{
 			if (Keyboard.current.upArrowKey.wasPressedThisFrame)
 			{
-				rigid2D.AddForce(Vector2.up*Random.Range(0,5.0f), ForceMode2D.Impulse);
+				rigid2D.AddForce(Vector2.up*Random.Range(0,7.0f), ForceMode2D.Impulse);
 			}
-			if (Keyboard.current.rightArrowKey.wasPressedThisFrame)
+			if (Keyboard.current.rightArrowKey.IsPressed())
 			{
-				rigid2D.AddForce(Vector2.up * Random.Range(0, 2.0f), ForceMode2D.Impulse);
-				rigid2D.AddForce(Vector2.right * Random.Range(0, 2.0f), ForceMode2D.Impulse);
+				rigid2D.AddForce(Vector2.up * Random.Range(0, 0.2f), ForceMode2D.Impulse);
+				rigid2D.AddForce(Vector2.right * Random.Range(0, 0.2f), ForceMode2D.Impulse);
 			}
-			if (Keyboard.current.leftArrowKey.wasPressedThisFrame)
+			if (Keyboard.current.leftArrowKey.IsPressed())
 			{
-				rigid2D.AddForce(Vector2.up * Random.Range(0, 2.0f), ForceMode2D.Impulse);
-				rigid2D.AddForce(Vector2.left * Random.Range(0, 2.0f), ForceMode2D.Impulse);
+				rigid2D.AddForce(Vector2.up * Random.Range(0, 0.2f), ForceMode2D.Impulse);
+				rigid2D.AddForce(Vector2.left * Random.Range(0, 0.2f), ForceMode2D.Impulse);
 			}
 		}
 	}

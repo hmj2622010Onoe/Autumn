@@ -622,9 +622,9 @@ MonoBehaviour:
   leavesPrefab: {fileID: 2463373593862941215, guid: 070988107e779aa4b841084bdcb4fccb, type: 3}
   leavesManager: {fileID: 65354109}
   maxLeaves: 150
-  xPlus: 10
-  xMinus: 10
-  yPlus: 5
+  xPlus: 8
+  xMinus: 8
+  yPlus: 4
   yMinus: 5
   titleXp: 8
   titleXm: 8
@@ -1337,7 +1337,7 @@ Transform:
   m_GameObject: {fileID: 857180338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.5, z: 0}
+  m_LocalPosition: {x: 1.5, y: -2, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
