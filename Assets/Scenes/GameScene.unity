@@ -1791,7 +1791,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 1787949089}
   leaves: {fileID: 0}
   moveSpeed: 30
-  rotateSpeed: 2
+  rotateSpeed: 3
   rotateMar: 100
   col1: {fileID: 1787949100}
   col2: {fileID: 1787949099}
@@ -2346,7 +2346,7 @@ MonoBehaviour:
   yMinus: 5
   timerText: {fileID: 646006590}
   scoreText: {fileID: 775809118}
-  gameTimer: 60
+  gameTimer: 120
 --- !u!4 &2076181710
 Transform:
   m_ObjectHideFlags: 0

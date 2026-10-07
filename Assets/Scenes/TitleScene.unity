@@ -622,14 +622,14 @@ MonoBehaviour:
   leavesPrefab: {fileID: 2463373593862941215, guid: 070988107e779aa4b841084bdcb4fccb, type: 3}
   leavesManager: {fileID: 65354109}
   maxLeaves: 150
-  xPlus: 8
-  xMinus: 8
-  yPlus: 4
-  yMinus: 5
-  titleXp: 8
-  titleXm: 8
-  titleYp: 4
-  titleYm: 5
+  xPlus: 10
+  xMinus: 10
+  yPlus: 5
+  yMinus: 6
+  titleXp: 8.5
+  titleXm: 8.5
+  titleYp: 3.5
+  titleYm: 4.5
 --- !u!4 &429836099
 Transform:
   m_ObjectHideFlags: 0
@@ -1788,7 +1788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -70.3, y: -57.1}
+  m_AnchoredPosition: {x: -70.3, y: -39.03}
   m_SizeDelta: {x: 200, y: 17.005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1675567885
